@@ -32,8 +32,8 @@ Thank you for your interest in contributing to the All Starz Fast Foods website!
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/NurullahTaha/all-starz-website.git
-   cd all-starz-website
+   git clone https://github.com/NurullahTaha/all-starz-website-new.git
+   cd all-starz-website-new
    ```
 
 2. Open `index.html` in your browser to view the website locally
