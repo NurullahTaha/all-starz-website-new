@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
+    <title>All Starz Fast Foods</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <svg id="filters" style="position: absolute; width: 0; height: 0; pointer-events: none;">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-spacer"></div>
+            <div class="nav-center">
+                <div class="nav-left">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                </div>
+                <div class="logo">
+                    <img src="assets/images/All_Starz_Fast_Foods_Logo_Transparent_4K.png" alt="All Starz Fast Foods Logo" class="logo-image">
+                </div>
+                <div class="nav-links-right">
+                    <a href="#menu" class="nav-link">Menu</a>
+                    <a href="#location" class="nav-link">Location</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="open-sign-container">
+                    <div class="open-sign-content">
+                        <div id="openSign" class="open-sign">OPEN</div>
+                        <div id="openTagline" class="open-tagline">Come visit us!</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" id="main-content">
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-slider">
+                    <div id="slider">
+                        <img id="img1"
+                             src="https://static.wixstatic.com/media/fbe9c2_633948ad5335444aa475fc27d13b8cfb~mv2.jpg"
+                             alt="Slide 1"
+                             style="opacity:1;">
+                        <img id="img2"
+                             src="https://static.wixstatic.com/media/fbe9c2_5c1bd65926d9489e92c2ebe8a3515b06~mv2.jpg"
+                             alt="Slide 2"
+                             style="opacity:0;">
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-brand">
+                        <h1 class="brand-primary">ALL <span class="star">★</span> STARZ</h1>
+                        <div class="brand-divider"></div>
+                        <h2 class="brand-secondary">LOVE AND SAUCE</h2>
+                    </div>
+                    <button class="cta-button" onclick="showPage('menu')">Explore Menu</button>
+                </div>
+            </div>
+
+            <section class="section menu-preview">
+                <div class="container">
+                    <h2 class="section-title">DELICIOUS OPTIONS</h2>
+                    <p class="section-subtitle">Discover our signature dishes crafted with passion and premium ingredients</p>
+                    <button class="cta-button explore-btn">Explore Menu</button>
+                    <div class="podium-wrapper">
+                        <div class="podium">
+                            <div class="step second">
+                                <img src="assets/images/big t.jpg" alt="Big T" class="podium-img">
+                                <span>2</span>
+                                <div class="label">Big T</div>
+                            </div>
+                            <div class="step first">
+                                <img src="assets/images/rasing faarah.jpg" alt="Raising Farah" class="podium-img">
+                                <span>1</span>
+                                <div class="label">Raising Farah</div>
+                            </div>
+                            <div class="step third">
+                                <img src="assets/images/Nagma.jpg" alt="Nagma" class="podium-img">
+                                <span>3</span>
+                                <div class="label">Nagma</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-alt reviews">
+                <div class="container">
+                    <h2 class="section-title reviews-title">What Our Customers Say</h2>
+                    <p class="section-subtitle">Real reviews from real customers who love our food</p>
+                    <div class="marquee-wrapper">
+                        <div class="marquee-content">
+                            <!-- Original set of review cards -->
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    All Star Burgers truly lives up to its name! 
+                                    The juicy patties, fresh buns, and perfectly balanced 
+                                    burger that's both delicious and satisfying.
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    Ordered Raising Farah and everything was 
+                                    cooked to perfection. Crispy, golden, and well seasoned—keen to come back!
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    Top tier food, burgers were outstanding and extremely addicting; 
+                                    you get your pennies worth, lovely customer experience!
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    The burger was good overall. The bun was surprisingly fluffy, which is better 
+                                    than almost all other burgers I've had.
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    Full of personality, and real service from a small Muslim business — they have a 
+                                    family section at the back.
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <!-- Duplicate cards for seamless scrolling -->
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    All Star Burgers truly lives up to its name! 
+                                    The juicy patties, fresh buns, and perfectly balanced 
+                                    burger that's both delicious and satisfying.
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    Ordered Raising Farah and everything was 
+                                    cooked to perfection. Crispy, golden, and well seasoned—keen to come back!
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    Top tier food, burgers were outstanding and extremely addicting; 
+                                    you get your pennies worth, lovely customer experience!
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    The burger was good overall. The bun was surprisingly fluffy, which is better 
+                                    than almost all other burgers I've had.
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <div class="review-text">
+                                    Full of personality, and real service from a small Muslim business — they have a 
+                                    family section at the back.
+                                </div>
+                                <div class="review-author">Customer Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta-button" onclick="showPage('location')">Leave Your Review</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="about" class="page">
+            <div class="section journey">
+                <div class="container">
+                    <h2 class="section-title">OUR JOURNEY</h2>
+                    <p class="section-subtitle">From humble beginnings to becoming your neighborhood's favorite burger destination</p>
+                    <div class="journey-content">
+                        <div class="journey-images">
+                            <div class="chef-collage">
+                                <div class="chef-text">MEET YOUR COOK</div>
+                                <div class="chef-images">
+                                    <img src="assets/images/image copy.png" alt="Chef at work" class="chef-image">
+                                    <img src="assets/images/image copy 2.png" alt="Chef with signature sauce" class="chef-image">
+                                </div>
+                                <div class="chef-text">THEY CALL HIM THE MAN WITH THE SAUCE</div>
+                            </div>
+                        </div>
+                        <div class="journey-text">
+                            <p>At All Starz, we're more than just a burger spot — we're a community. What drives us isn't just serving good food, it's about creating a space where people feel cared for, connected, and welcomed like family. Every burger we make is wrapped in passion, every meal comes with a side of love and sauce of course!. Every customer is treated like a regular from day one. All Starz is built on the belief that food should bring people together with flavour, fun, and heart in every bite.</p>
+                            <button class="cta-button" onclick="showPage('menu')">Try Our Food</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="menu" class="page">
+            <div class="container">
+                <div class="menu-header">
+                    <h2 class="section-title">Our Menu</h2>
+                    <p class="section-subtitle">Explore our delicious selection of burgers, sides, and desserts made fresh daily</p>
+                </div>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="court-specials">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Court Specials
+                    </button>
+                    <button class="category-btn" data-category="burgers">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 3c.132 0 .263 0 .393 0C17.748 3.224 22 7.582 22 13c0 5.523-4.477 10-10 10S2 18.523 2 13c0-5.418 4.252-9.776 9.607-10C11.737 3 11.868 3 12 3zm0 2c-.132 0-.263 0-.393 0C7.252 5.224 4 8.582 4 13c0 4.418 3.582 8 8 8s8-3.582 8-8c0-4.418-3.252-7.776-7.607-8C12.263 5 12.132 5 12 5zM8 12h8v2H8v-2zm2-3h4v2h-4V9z"/>
+                        </svg>
+                        Burgers
+                    </button>
+                    <button class="category-btn" data-category="bowls">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2 12C2 17.52 6.48 22 12 22s10-4.48 10-10c0-1.19-.22-2.32-.6-3.38L20.4 8.2C20.78 9.3 21 10.43 21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c.57 0 1.12.05 1.66.15l.34-1.32C13.36 2.05 12.69 2 12 2 6.48 2 2 6.48 2 12zm17-7l-2 8h-2l2-8h2z"/>
+                        </svg>
+                        Pick'em Bowls
+                    </button>
+                    <button class="category-btn" data-category="chips">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16.84 2.07C16.93 2.04 17.04 2 17.14 2c.85 0 1.55.7 1.55 1.55v.12c-.03.89-.93 1.55-1.84 1.55-.91 0-1.81-.66-1.84-1.55v-.12c0-.24.05-.47.13-.69L12 7.5 8.86 2.86c.08.22.13.45.13.69v.12c-.03.89-.93 1.55-1.84 1.55-.91 0-1.81-.66-1.84-1.55v-.12C5.31 2.7 6.01 2 6.86 2c.1 0 .21.04.3.07L12 9.5l4.84-7.43zM12 11l-8 13h16l-8-13z"/>
+                        </svg>
+                        BYO Chips
+                    </button>
+                    <button class="category-btn bottom-row" data-category="sides">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                        </svg>
+                        Sides
+                    </button>
+                    <button class="category-btn bottom-row" data-category="desserts">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C9.24 2 7 4.24 7 7v3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V7c0-2.76-2.24-5-5-5zm3 8H9V7c0-1.66 1.34-3 3-3s3 1.34 3 3v3zm-3 3c-1.1 0-2 .9-2 2v5c0 1.1.9 2 2 2s2-.9 2-2v-5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                        Desserts
+                    </button>
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-section active" id="court-specials">
+                        <div class="menu-item">
+                            <img src="assets/images/rasing faarah.jpg" alt="Raising Farah" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Raising Farah</h3>
+                                <p>Seasoned chips, fried chicken tenders, toasted bun and cup of BRR sauce</p>
+                            </div>
+                            <div class="item-price">$25</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/images/Kriss Kross.jpg" alt="Kriss Kross" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Kriss Kross</h3>
+                                <p>Croissant bun, smashed beef patty, melted cheese, beef rashers, caramelized onions, pickles and BBQ sauce</p>
+                            </div>
+                            <div class="item-price">$18</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/images/Big Bay.jpg" alt="Big Bay" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Big Bay</h3>
+                                <p>Croissant bun, smashed patty, lettuce, tomato, turkey bacon and Swiss cheese</p>
+                            </div>
+                            <div class="item-price">$20</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="bowls">
+                        <div class="menu-item">
+                            <img src="assets/images/pick'em bowls.jpg" alt="Pick'em Bowls" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Pick'em Bowls</h3>
+                                <p><strong>Meat Options:</strong> Grilled Chicken Mince, Grilled Chicken Tender, Fried Chicken Tender, Smashed Beef Patty</p>
+                                <p><strong>Fillings:</strong> Regular Chips, Sweet Potato Chips, Waffle Fries, Salad Mix</p>
+                                <p><strong>Sauces:</strong> Big BRRR Sauce, Mustard, Sweet Chilli, Garlic</p>
+                            </div>
+                            <div class="item-price">$25</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="chips">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>BYO Chips</h3>
+                                <p>Bring your own chips, and let us decorate it with any meat, salad, and sauces of your choice!</p>
+                            </div>
+                            <div class="item-price">$10</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="sides">
+                        <div class="menu-item">
+                            <img src="assets/images/chips.jpg" alt="Chips" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Chips</h3>
+                                <p>Small / Large / Family / Chili Cheese Fries</p>
+                            </div>
+                            <div class="item-price">$5 / $7 / $9 / $10</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="desserts">
+                        <div class="menu-item">
+                            <img src="assets/images/Naima Nono.jpg" alt="Naima Nono" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Naima Nono</h3>
+                                <p>Butter toasted croissant filled with chocolate spread and creamy vanilla ice cream sprinkled with chunks of white chocolate</p>
+                            </div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/images/Halimah Haah.jpg" alt="Halimah Haah" class="menu-item-image">
+                            <div class="item-info">
+                                <h3>Halimah Haah</h3>
+                                <p>Butter toasted croissant filled with chocolate spread and creamy chocolate ice cream sprinkled with chunks of almond chocolate</p>
+                            </div>
+                            <div class="item-price">$13</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="burgers">
+                        <div class="burger-section-header">
+                            <h4>Beef Burger Lineup</h4>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Warga</h3>
+                                <p>Beef patty topped with melted cheese, onion, lettuce and tomato</p>
+                            </div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Clutch BBQ</h3>
+                                <p>Beef patty topped with melted cheese, beef rashers, caramelised onions, pickles and sweet barbecue sauce</p>
+                            </div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Cheezy Abdi</h3>
+                                <p>Beef patty, melted cheese, cheese sauce and pickles</p>
+                            </div>
+                            <div class="item-price">$15</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Big T</h3>
+                                <p>Beef patty topped with melted cheese, lettuce, tomato, caramelised onions, beef rashers and sweet barbecue sauce</p>
+                            </div>
+                            <div class="item-price">$17</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Beef with the Malis</h3>
+                                <p>Beef patty, turkey bacon, mozzarella, chips and ketchup</p>
+                            </div>
+                            <div class="item-price">$17</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Nagma</h3>
+                                <p>Beef patty, melted cheese, cheesy nachos and salsa</p>
+                            </div>
+                            <div class="item-price">$18</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Swish</h3>
+                                <p>Beef patty topped with cheese and pickles</p>
+                            </div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        
+                        <div class="burger-section-header">
+                            <h4>Chicken Burger Lineup</h4>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Warras Chick</h3>
+                                <p>Chicken patty topped with melted cheese, onion, lettuce and tomato</p>
+                            </div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Clutch Chick</h3>
+                                <p>Chicken patty, melted cheese, caramelised onions, pickles, sweet barbecue sauce</p>
+                            </div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Cheezy Faduma</h3>
+                                <p>Chicken patty, melted cheese, cheese sauce and pickles</p>
+                            </div>
+                            <div class="item-price">$15</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Baby T</h3>
+                                <p>Chicken patty topped with melted cheese, lettuce, tomato, caramelised onions and sweet barbecue sauce</p>
+                            </div>
+                            <div class="item-price">$17</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="sides">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Regular Fries</h3>
+                                <p>Golden crispy fries seasoned with our special blend</p>
+                            </div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Sweet Potato Fries</h3>
+                                <p>Crispy sweet potato fries with a hint of cinnamon</p>
+                            </div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Onion Rings</h3>
+                                <p>Beer-battered onion rings served with ranch dipping sauce</p>
+                            </div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Loaded Nachos</h3>
+                                <p>Tortilla chips topped with cheese, jalapeños, sour cream, and guacamole</p>
+                            </div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Mozzarella Sticks</h3>
+                                <p>Golden fried mozzarella sticks with marinara dipping sauce</p>
+                            </div>
+                            <div class="item-price">$8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="page">
+            <div class="section">
+                <div class="container">
+                    <h2 class="section-title">Visit Us</h2>
+                    <p class="section-subtitle">Come experience the All Starz difference in person</p>
+                    <div class="location-content">
+                        <div class="location-info">
+                            <div class="location-details">
+                            <h3>Location</h3>
+                            <p>358A Railway Parade, Beckenham WA 6107</p>
+                            <h3>Explore</h3>
+                            <p>Come visit us at our convenient location. We are open Monday to Friday from 2:00PM to 10:00 PM plus Saturday and Sunday from 2:00 PM to 12:00 AM, ready to satisfy your cravings for mouthwatering burgers.</p>
+                            </div>
+                        </div>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6234567890123!2d115.9541!3d-32.0224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a1a1a1a1a1a1%3A0x1a1a1a1a1a1a1a1a!2s358A%20Railway%20Parade%2C%20Beckenham%20WA%206107%2C%20Australia!5e0!3m2!1sen!2sau!4v1234567890123!5m2!1sen!2sau"
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h2 class="contact-title">LEAVE US YOUR THOUGHTS</h2>
+                        <form class="form" id="review-form">
+                            <input type="text" name="from_name" placeholder="Your Name" required>
+                            <input type="email" name="from_email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Your Review" rows="5" required></textarea>
+                            <button type="submit" class="submit-btn">Send Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Opening Hours</h2>
+            <p class="section-subtitle">We're here when you need us most</p>
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <strong>Monday - Friday</strong>
+                    <span>2:00 PM - 10:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <strong>Saturday - Sunday</strong>
+                    <span>2:00 PM - 12:00 AM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/All_Starz_Fast_Foods_Logo_Transparent_4K.png" alt="All Starz Fast Foods Logo" class="footer-logo-image">
+                </div>
+                <div class="footer-sections">
+                    <div class="footer-section">
+                        <h4>SOCIAL</h4>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/all_starz_fastfoodz/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@thedarkestkangaroo1" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>CONTACT</h4>
+                        <p>info@mysite.com</p>
+                        <p>Tel. +61 401 610 223</p>
+                        <p>358a Railway Parade, Beckenham, WA 6107</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_ACTUAL_API_KEY_HERE&callback=initMap&libraries=marker&v=beta&solution_channel=GMP_CCS_reversegeocoding_v3"
+    ></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

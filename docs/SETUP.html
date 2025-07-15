@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setup Guide - All Starz Fast Foods Website | all-starz-website</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Setup Guide - All Starz Fast Foods Website" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://nurullahtaha.github.io/all-starz-website/docs/SETUP.html" />
+<meta property="og:url" content="https://nurullahtaha.github.io/all-starz-website/docs/SETUP.html" />
+<meta property="og:site_name" content="all-starz-website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setup Guide - All Starz Fast Foods Website" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Setup Guide - All Starz Fast Foods Website","url":"https://nurullahtaha.github.io/all-starz-website/docs/SETUP.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/all-starz-website/assets/css/style.css?v=121b959a0415fb7f38525ac3e22be1a7ad44a2e3">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/all-starz-website/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://nurullahtaha.github.io/all-starz-website/">all-starz-website</a></h1>
+      
+
+      <h1 id="setup-guide---all-starz-fast-foods-website">Setup Guide - All Starz Fast Foods Website</h1>
+
+<p>This guide will help you set up and customize the All Starz Fast Foods website.</p>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<ol>
+  <li><strong>Clone the repository</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/NurullahTaha/all-starz-website.git
+<span class="nb">cd </span>all-starz-website
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Open the website</strong>:
+    <ul>
+      <li>Simply open <code class="language-plaintext highlighter-rouge">index.html</code> in your web browser</li>
+      <li>No build process required - it’s a static website</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="emailjs-setup">EmailJS Setup</h3>
+
+<p>The contact form uses EmailJS to send emails. To set it up:</p>
+
+<ol>
+  <li>Create an account at <a href="https://www.emailjs.com/">EmailJS</a></li>
+  <li>Create a new service (Gmail, Outlook, etc.)</li>
+  <li>Create an email template</li>
+  <li>Update the configuration in <code class="language-plaintext highlighter-rouge">assets/js/script.js</code>:</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Replace these with your EmailJS credentials</span>
+<span class="kd">const</span> <span class="nx">emailConfig</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">serviceID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_service_id</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">templateID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_template_id</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">userID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_user_id</span><span class="dl">'</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="google-maps-api">Google Maps API</h3>
+
+<p>The location page includes an interactive map. The API key is already configured for the restaurant location, but if you need to change it:</p>
+
+<ol>
+  <li>Get a Google Maps API key from <a href="https://console.cloud.google.com/">Google Cloud Console</a></li>
+  <li>Enable the Maps JavaScript API</li>
+  <li>Update the API key in <code class="language-plaintext highlighter-rouge">index.html</code>:</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">async</span> <span class="na">defer</span> <span class="na">src=</span><span class="s">"https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h2 id="customization">Customization</h2>
+
+<h3 id="colors-and-branding">Colors and Branding</h3>
+
+<p>The website uses CSS custom properties for easy theming. Update these in <code class="language-plaintext highlighter-rouge">assets/css/styles.css</code>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:root</span> <span class="p">{</span>
+    <span class="py">--primary-gold</span><span class="p">:</span> <span class="m">#FFF8E7</span><span class="p">;</span>
+    <span class="py">--accent-yellow</span><span class="p">:</span> <span class="m">#FFD700</span><span class="p">;</span>
+    <span class="py">--accent-orange</span><span class="p">:</span> <span class="m">#FF9500</span><span class="p">;</span>
+    <span class="py">--accent-red</span><span class="p">:</span> <span class="m">#8B1538</span><span class="p">;</span>
+    <span class="py">--text-dark</span><span class="p">:</span> <span class="m">#2C1810</span><span class="p">;</span>
+    <span class="py">--bg-primary</span><span class="p">:</span> <span class="m">#1A1A1A</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="menu-items">Menu Items</h3>
+
+<p>To update menu items:</p>
+
+<ol>
+  <li>Edit the menu sections in <code class="language-plaintext highlighter-rouge">index.html</code></li>
+  <li>Add/replace images in <code class="language-plaintext highlighter-rouge">assets/images/</code></li>
+  <li>Update prices and descriptions as needed</li>
+</ol>
+
+<h3 id="restaurant-information">Restaurant Information</h3>
+
+<p>Update these sections in <code class="language-plaintext highlighter-rouge">index.html</code>:</p>
+<ul>
+  <li>Address in the location section</li>
+  <li>Phone number in the footer</li>
+  <li>Social media links</li>
+  <li>Opening hours</li>
+</ul>
+
+<h2 id="file-organization">File Organization</h2>
+
+<h3 id="assets-structure">Assets Structure</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assets/
+├── css/
+│   └── styles.css          # All styles
+├── js/
+│   └── script.js           # All JavaScript
+└── images/
+    ├── favicon files       # Browser icons
+    ├── logo files          # Restaurant logo
+    └── menu images         # Food photos
+</code></pre></div></div>
+
+<h3 id="adding-new-images">Adding New Images</h3>
+
+<ol>
+  <li>Place images in <code class="language-plaintext highlighter-rouge">assets/images/</code></li>
+  <li>Use descriptive filenames</li>
+  <li>Optimize images for web (recommended: under 500KB)</li>
+  <li>Update HTML references to include <code class="language-plaintext highlighter-rouge">assets/images/</code> path</li>
+</ol>
+
+<h2 id="development">Development</h2>
+
+<h3 id="local-development">Local Development</h3>
+
+<ol>
+  <li>Open <code class="language-plaintext highlighter-rouge">index.html</code> directly in browser</li>
+  <li>Make changes to HTML, CSS, or JS files</li>
+  <li>Refresh browser to see changes</li>
+  <li>No build process required</li>
+</ol>
+
+<h3 id="testing">Testing</h3>
+
+<p>Test the website on:</p>
+<ul>
+  <li><strong>Desktop browsers</strong>: Chrome, Firefox, Safari, Edge</li>
+  <li><strong>Mobile devices</strong>: iOS Safari, Chrome Mobile</li>
+  <li><strong>Tablet devices</strong>: iPad, Android tablets</li>
+</ul>
+
+<h3 id="common-issues">Common Issues</h3>
+
+<p><strong>Images not loading:</strong></p>
+<ul>
+  <li>Check file paths include <code class="language-plaintext highlighter-rouge">assets/images/</code></li>
+  <li>Verify image files exist in the images folder</li>
+  <li>Check for case-sensitive filename issues</li>
+</ul>
+
+<p><strong>Contact form not working:</strong></p>
+<ul>
+  <li>Verify EmailJS configuration</li>
+  <li>Check browser console for errors</li>
+  <li>Ensure EmailJS library is loaded</li>
+</ul>
+
+<p><strong>Map not displaying:</strong></p>
+<ul>
+  <li>Check Google Maps API key</li>
+  <li>Verify API key has proper permissions</li>
+  <li>Check browser console for errors</li>
+</ul>
+
+<h2 id="deployment">Deployment</h2>
+
+<h3 id="github-pages-recommended">GitHub Pages (Recommended)</h3>
+
+<ol>
+  <li>Push code to GitHub repository</li>
+  <li>Go to repository Settings &gt; Pages</li>
+  <li>Select “Deploy from a branch”</li>
+  <li>Choose “main” branch and “/ (root)” folder</li>
+  <li>Save and wait for deployment</li>
+</ol>
+
+<h3 id="other-hosting-options">Other Hosting Options</h3>
+
+<p>The website works on any static hosting provider:</p>
+<ul>
+  <li>Netlify</li>
+  <li>Vercel</li>
+  <li>AWS S3</li>
+  <li>Any web server</li>
+</ul>
+
+<p>Simply upload all files maintaining the folder structure.</p>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<h3 id="regular-updates">Regular Updates</h3>
+
+<ul>
+  <li>Update menu items and prices seasonally</li>
+  <li>Refresh food photos regularly</li>
+  <li>Update operating hours as needed</li>
+  <li>Monitor and respond to form submissions</li>
+</ul>
+
+<h3 id="performance">Performance</h3>
+
+<p>The website is optimized for:</p>
+<ul>
+  <li>Fast loading times</li>
+  <li>Mobile responsiveness</li>
+  <li>Search engine optimization</li>
+  <li>Accessibility standards</li>
+</ul>
+
+<h2 id="support">Support</h2>
+
+<p>For technical support:</p>
+<ul>
+  <li>Check the <a href="/all-starz-website/CONTRIBUTING.md">CONTRIBUTING.md</a> file</li>
+  <li>Open an issue on GitHub</li>
+  <li>Review browser console for error messages</li>
+</ul>
+
+<hr />
+
+<p><strong>Happy coding! 🍔⭐</strong></p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/NurullahTaha/all-starz-website/edit/main/docs/SETUP.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
